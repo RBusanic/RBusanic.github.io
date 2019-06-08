@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adventure Time Clock</title>
+   <link href="https://fonts.googleapis.com/css?family=Astloch|Aubrey|Averia+Sans+Libre|Bad+Script|Barrio|Bigelow+Rules&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script type="text/javascript">
+    function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+        </script>
+    </head>
+<body>
+<div class="finn">
+<header>Finn and Jake's Clock</header>
+<h1>It's always adventure time here!</h1>
+
+<h4 class="ninjabrian">Hi there friend~!</h4>
+<img src="img/Finn%20and%20Jake.gif">
+
+<canvas id="canvas" width="400" style="background-color: azure"></canvas>
+    </div>
+
+    </body>
+</html>
